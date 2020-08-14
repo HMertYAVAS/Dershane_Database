@@ -1,0 +1,90 @@
+import psycopg2
+import sys
+
+con=psycopg2.connect(
+
+    database="Dershane_Database",
+    user="postgres",
+    password="Mert1996"
+)
+cur=con.cursor()
+cs=cur.execute("SELECT * FROM dersler id=dersler.Did)
+print(cs)
+print("XXX Dershanemize Hoşgeldiniz.")
+print("Giriş için\nEmail: ",end="")
+email=input()
+print("Sifre: ",end="")
+sifre=input()
+
+#giris kontrolü
+
+
+
+if (1==1):
+    while 1:
+        print("Hoşgeldiniz\n ")
+
+        print("""
+        Sifre Degişimi 1
+        Ders Plani 2
+        Dokumanlar 3
+        Randevu 4
+        Sonuc 5
+        Uyelik Islem 6
+        Çıkış 7
+    
+        """)
+        print("Giriniz: ",end="")
+        gorev= int(input())
+
+
+        if gorev==1:
+            print("Yeni Şifrenizi Girin: ",end="")
+            yenisifre=input()
+            #Burada şifre değişimi sql ifadesi
+            #Yeni şifre koşul ifadesi eğer olduysa değiştirildi yazacak
+        elif gorev==2:
+            print("Ders Programı")
+            #Ekrana Ders programı bastırılacak
+        elif gorev==3:
+            print("Hangi Kaynağı istiyorsunuz id yazınız:",end="")
+            #Burada kaynak bilgisi
+        elif gorev == 4:
+            print("""
+            Randevu Ara 1
+            Randevu Ekle 2
+            Randevu Değiştir 3
+            Randevu Sil 4""")
+            print("Giriniz: ",end="")
+            rande=int(input())
+            if rande == 1:
+                print("Hangi Randevularınız")
+                    #aramasql
+            elif rande==2:
+                #eklesql
+                    print("Randevu ekle")
+            elif rande==3:
+                print("Hangi Randevu Değiştirilecek?")
+                #Degistirsql
+            elif rande==4:
+                print("Hangi Randevu silinecek?")
+                #Silsql
+
+            else:
+                print("Hatalı girdiniz")
+        elif gorev == 5:
+            print("Deneme Sonuçlarınız: ")
+                #deneme sonuc sql
+        elif gorev == 6:
+            print("""
+            Uyelik uzatmak 1
+            Uyelik İptal 2
+            Uyeliğinizi görmek için 3""")
+        elif gorev == 7:
+            break
+        else:
+            print("Böyle bir sayı yoktur.")
+else:
+    print("Tekrar dene")
+
+
